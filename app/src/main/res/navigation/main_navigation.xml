@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/item1_fragment">
+
+    <fragment
+        android:id="@+id/item1_fragment"
+        android:name="org.sel.usoltsev_drawer.Fragment1"
+        android:label="fragment_item1_"
+        tools:layout="@layout/fragment_1" >
+        <action
+            android:id="@+id/action_fragment_item1_to_item2_fragment"
+            app:destination="@id/item2_fragment" />
+        <action
+            android:id="@+id/action_item1_fragment_to_item3_fragment"
+            app:destination="@id/item3_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/item2_fragment"
+        android:name="org.sel.usoltsev_drawer.Fragment2"
+        android:label="fragment_2"
+        tools:layout="@layout/fragment_2" >
+        <action
+            android:id="@+id/action_fragment2_to_fragment1"
+            app:destination="@id/item1_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/item3_fragment"
+        android:name="org.sel.usoltsev_drawer.Fragment3"
+        android:label="fragment_3"
+        tools:layout="@layout/fragment_3" >
+        <action
+            android:id="@+id/action_fragment3_to_fragment1"
+            app:destination="@id/item1_fragment" />
+    </fragment>
+</navigation>
