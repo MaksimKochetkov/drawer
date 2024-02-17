@@ -10,6 +10,7 @@
     android:fitsSystemWindows="true"
     >
     <include
+        android:id="@+id/m"
         layout="@layout/tb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -17,8 +18,6 @@
 <!--        android:id="@+id/FL"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent">-->
-
-
 <!--    </FrameLayout>-->
 
     <com.google.android.material.navigation.NavigationView

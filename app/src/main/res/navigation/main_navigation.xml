@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/item1_fragment"
         android:name="org.sel.usoltsev_drawer.Fragment1"
-        android:label="fragment_item1_"
+        android:label="Первый фрагмент"
         tools:layout="@layout/fragment_1" >
         <action
             android:id="@+id/action_fragment_item1_to_item2_fragment"
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/item2_fragment"
         android:name="org.sel.usoltsev_drawer.Fragment2"
-        android:label="fragment_2"
+        android:label="Второй фрагмент"
         tools:layout="@layout/fragment_2" >
         <action
             android:id="@+id/action_fragment2_to_fragment1"
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/item3_fragment"
         android:name="org.sel.usoltsev_drawer.Fragment3"
-        android:label="fragment_3"
+        android:label="Третий фрагмент"
         tools:layout="@layout/fragment_3" >
         <action
             android:id="@+id/action_fragment3_to_fragment1"

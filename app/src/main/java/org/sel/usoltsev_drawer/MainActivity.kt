@@ -6,7 +6,9 @@ import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import org.sel.usoltsev_drawer.databinding.ActivityMainBinding
     private lateinit var binding: ActivityMainBinding
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.m.materialToolbar2)
         navContr = findNavController(R.id.fragmentContainerView)
         conf=AppBarConfiguration(
             setOf(
@@ -26,7 +29,11 @@ class MainActivity : AppCompatActivity() {
             ), binding.drawer
         )
         setupActionBarWithNavController(navContr, conf)
-        binding.navView
+        binding.navView.setupWithNavController(navContr)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navContr.navigateUp(conf)||super.onSupportNavigateUp()
     }
 
 }
